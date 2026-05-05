@@ -30,13 +30,11 @@ Most market research never ends. You keep adding data, refining analysis, and po
 Open Claude Code and type:  start this project
 ```
 
-Claude detects which mode to use based on what's in `research/raw/`:
+Claude runs a four-round interview (skills → channels → moat → constraints) and writes your answers into `docs/00-research-question.md`.
 
-**No existing docs** → runs a four-round interview (skills → channels → moat → constraints)
+**Have existing docs?** Drop them into `research/raw/` first. Claude reads them before each round and opens with its understanding of that area — you react, correct, or expand rather than narrating from scratch. The docs are reference material, not answers; everything still goes through you.
 
-**Have existing docs?** → drop them into `research/raw/` first (brainstorms, vision docs, plans, AI chat exports, anything you've written), then say "start this project". Claude reads your docs, extracts answers for all four areas, shows you a table of defaults with confidence levels, and only asks questions for gaps or conflicts. Your role is to confirm, correct, or override — not re-narrate what you've already written.
-
-Either way, Claude shows you the proposed content for your approval **before** writing anything to `docs/00`.
+Either way, Claude shows you the full proposed content for your approval **before** writing anything.
 
 > Equivalent triggers: "begin this project" · "initialize this project" · "开始这个项目"
 >
