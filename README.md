@@ -32,6 +32,8 @@ Open Claude Code and type:  start this project
 
 Claude interviews you across four areas — core skills, channel status, long-term moat direction, startup constraints — then writes your answers directly into `docs/00-research-question.md`.
 
+> **Already have your own docs?** Drop them into `research/raw/` first — brainstorms, vision docs, rough plans, previous AI conversations, anything you've already written. Claude will reference them during the interview instead of asking you to repeat yourself.
+
 > Equivalent triggers: "begin this project" · "initialize this project" · "开始这个项目"
 >
 > If Claude doesn't auto-recognize: say "use the start-project skill"
@@ -97,7 +99,8 @@ Research stops when all six questions have specific, executable answers:
 │   └── templates/               # Reusable tables and card formats
 ├── prompts/                     # Per-agent prompt library
 ├── research/
-│   ├── raw/                     # Unprocessed source material
+│   ├── raw/                     # Everything unprocessed: your own brainstorms, vision docs,
+│   │                            # rough plans, external articles, interview notes, AI chat exports
 │   ├── source-cards/            # Single-fact evidence cards
 │   ├── competitor-cards/        # Standardized competitor profiles
 │   └── user-cards/              # User pain points and interview notes
