@@ -1,95 +1,143 @@
+<div align="center">
+
 # Market Research Landing Lab
 
-## 🚀 快速开始
+**Stop collecting. Start deciding.**
 
-**如果你刚从这个模板派生出一个新项目,第一步只需一句话:**
+A Claude Code–native template for turning market research into executable business decisions.
+Built-in graduation conditions tell you exactly when to stop researching and start building.
 
-> 打开 Claude Code,输入 **"开始这个项目"**
+[English](README.md) · [中文](README.zh.md)
 
-Claude 会自动进入访谈流,依次收集:
+[![Use this template](https://img.shields.io/badge/-Use%20this%20template-2ea44f?style=flat-square&logo=github)](../../generate)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-ready-blueviolet?style=flat-square)](https://claude.ai/code)
 
-1. 执行人核心技能
-2. 当前渠道现状
-3. 长期护城河方向
-4. 启动约束(时间 / 资金 / 月收入目标)
-
-访谈结束后,答案会直接写入 `docs/00-research-question.md` 的"执行人前提确认"章节,并给你看 diff 再决定是否提交。
-
-> 其他等效触发词:"启动项目" / "初始化这个项目" / "start this project"
->
-> 如果 Claude 没自动识别,直接说"用 start-project skill 启动"即可。
+</div>
 
 ---
 
-## 仓库定位
+## The Problem
 
-这是一个用于"市场调研和落地方案探讨"的**决策仓库**,不是产品代码仓库。
+Most market research never ends. You keep adding data, refining analysis, and postponing the one decision that matters. This template forces a different contract: research exists to produce a decision, not to delay it.
 
-本仓库的目标是帮助后续的 Claude Code、Codex、ChatGPT 围绕同一套文档结构推进:
+---
 
-1. 市场调研
-2. 竞品分析
-3. 短期现金流项目筛选
-4. 长期护城河项目设计
-5. MVP 冻结与执行切换
+## Quick Start
 
-## 不是用来做什么
+**Just created a new repo from this template? One command to begin:**
 
-- 不写前端代码
-- 不写后端代码
-- 不写 App 代码
-- 不写数据库代码
-- 不自动开始调研
-- 不在没有证据的情况下产出市场结论
+```
+Open Claude Code and type:  start this project
+```
 
-## 核心记录规则
+Claude interviews you across four areas — core skills, channel status, long-term moat direction, startup constraints — then writes your answers directly into `docs/00-research-question.md`.
 
-所有调研与决策文档都必须尽量使用三段式:
+> Equivalent triggers: "begin this project" · "initialize this project" · "开始这个项目"
+>
+> If Claude doesn't auto-recognize: say "use the start-project skill"
 
-### 证据
+---
 
-- 来源是什么
-- 看到的原始信息是什么
-- 缺了什么信息
+## The Pipeline
 
-### 推断
+Every derived project follows the same ten-document sequence:
 
-- 基于现有证据可以做出什么有限判断
-- 推断的置信度如何
-- 哪些地方仍然需要验证
+```
+docs/00   Research Question   ──  Define the decision before you research
+docs/01   Market Map          ──  Landscape, segments, key players
+docs/02   User Segments       ──  Who has the problem, who will pay
+docs/03   Competitor Map      ──  First-screen hooks, pricing, weak spots
+docs/04   Short-Term Options  ──  Paths to revenue within 30 days
+docs/05   Long-Term Moat      ──  Defensible assets built in 12 months
+docs/06   Fusion Strategy     ──  Where both paths share assets
+docs/07   MVP Candidates      ──  Side-by-side comparable options
+docs/08   Final Decision      ──  Locked direction, frozen reasoning
+docs/09   Execution Roadmap   ──  Research ends here
+```
 
-### 决策
+---
 
-- 当前是否继续
-- 当前是否淘汰
-- 下一步要补哪类证据
+## The Three-Segment Rule
 
-## 毕业条件
+Every entry in every document must separate:
 
-当以下问题都有可执行答案时,停止调研并进入项目执行:
+```
+Evidence   ──  What you actually observed. Sources required.
+Inference  ──  Limited conclusions from that evidence. Confidence rated.
+Decision   ──  Continue / eliminate / next verification step.
+```
 
-1. 第一版做什么
-2. 第一版不做什么
-3. 7 天 Demo 范围
-4. 30 天 MVP 范围
-5. 第一个收费点
-6. 短期项目如何反哺长期护城河
+Weak evidence must be labeled as weak. Inference cannot be written in the Evidence section. No exceptions.
 
-## 完整工作流
+---
 
-1. 首次初始化:用上面的"快速开始"填 [docs/00-research-question.md](docs/00-research-question.md)
-2. 补充 `research/` 下的原始材料和卡片(用 [docs/templates/evidence-card.md](docs/templates/evidence-card.md) 落盘)
-3. 更新 `docs/01-09` 中的结构化判断
-4. 把阶段性结论沉淀到 `decisions/` ADR
+## Graduation Conditions
 
-## 目录说明
+Research stops when all six questions have specific, executable answers:
 
-- `ai/`:多 Agent 协作的任务、状态、结果、交接模板
-- `docs/`:结构化研究与决策文档(`00-09` 为固定管线)
-- `docs/templates/`:跨文档引用的公共模板(资产复用矩阵、证据卡格式)
-- `research/`:原始材料和证据卡片
-  - `raw/` 原始资料,`source-cards/` 事实卡,`competitor-cards/` 竞品卡,`user-cards/` 用户卡
-- `decisions/`:关键决策 ADR
-- `prompts/`:不同 Agent 的提示词
-- `skills/`:项目内可复用的工作流契约
-- `.claude/skills/`:Claude Code 自动触发的 skill(如 `start-project`)
+- [ ] What to build first — a concrete product or service, not a direction
+- [ ] What NOT to build — explicit exclusions with verifiable reasons
+- [ ] 7-day demo scope — completable by one person in one week
+- [ ] 30-day MVP scope — smallest version someone will pay for
+- [ ] First revenue point — specific amount and payment scenario
+- [ ] How the short-term project feeds the long-term moat — specific asset flow, not a slogan
+
+---
+
+## Directory Structure
+
+```
+.
+├── .claude/
+│   └── skills/start-project/    # Auto-triggered onboarding interview
+├── ai/                          # Multi-agent handoff templates (Claude / Codex)
+├── decisions/                   # Architecture Decision Records (ADRs)
+├── docs/
+│   ├── 00–09 *.md               # Fixed research pipeline
+│   └── templates/               # Reusable tables and card formats
+├── prompts/                     # Per-agent prompt library
+├── research/
+│   ├── raw/                     # Unprocessed source material
+│   ├── source-cards/            # Single-fact evidence cards
+│   ├── competitor-cards/        # Standardized competitor profiles
+│   └── user-cards/              # User pain points and interview notes
+└── skills/                      # Workflow contracts for Claude
+```
+
+---
+
+## Using This Template
+
+1. Click **Use this template** → Create a new repository
+2. Clone your new repo
+3. Open Claude Code → type **"start this project"**
+4. Complete the four-round interview (~5 min)
+5. Start filling `docs/01` onward
+
+**This base repo stays clean.** Never do domain-specific research here.
+Derive a new repo per project. One project, one repo.
+
+---
+
+## What This Is Not
+
+- Not a product code repository
+- Not a place for frontend, backend, or app code
+- Not a place to write market claims without sources
+- Not a tool for open-ended research without a decision target
+- Not a system that auto-generates conclusions from assumptions
+
+---
+
+## Multi-Agent Support
+
+The `ai/` directory contains handoff templates for Claude Code, Codex, and ChatGPT.
+Each agent operates on the same document structure with role-specific instructions in `AGENTS.md`.
+
+---
+
+<div align="center">
+
+Research less. Decide more. Build sooner.
+
+</div>
