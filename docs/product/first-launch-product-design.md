@@ -68,6 +68,7 @@ Agent rule:
 - The agent may propose candidates and a recommendation, but must ask the user before freezing decisions that affect launch surface, account system, billing, pricing, data strategy, AI cost, acquisition promise, or required page scope.
 - If evidence is missing, write `证据不足`.
 - If a change expands the first launch scope, state what scope expanded before editing.
+- After generating or updating concrete page design, list new or unresolved user-judgment questions in the final response and explicitly ask whether to decide them now.
 
 ## 6. Revenue Standard
 
