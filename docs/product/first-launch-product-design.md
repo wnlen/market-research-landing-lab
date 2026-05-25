@@ -29,7 +29,28 @@ First launch product
 |----------------------|----------------|-------------|-----------------|-------------------|-----------------------|
 | [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | required / candidate / excluded |
 
-## 4. Questions Requiring User Judgment
+## 4. Page Capability Design
+
+Define every first launch page and the capabilities each page contains. Do not design page transitions here.
+
+| Page | Page responsibility | Visible content | Capabilities shown | User actions | System feedback | First launch decision |
+|------|---------------------|-----------------|--------------------|--------------|-----------------|-----------------------|
+| [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | required / candidate / excluded |
+
+Page design rules:
+
+- A capability is not launch-ready until it has a page owner.
+- Each required page must state what the user sees, what the user can do, and what state the system returns.
+- A first launch product that needs revenue must include account, pricing / billing, payment result, and acquisition / promotion pages.
+- A self-serve first launch product should include onboarding or first-run guidance unless there is explicit evidence that users do not need it.
+- Page transitions, navigation hierarchy, pixel-level UI, and engineering tasks belong in downstream product repositories.
+
+Input ownership:
+
+- If the product has user input, define which page owns full input management.
+- A home page may expose a quick input entry, but it should not silently become the full input management page unless explicitly decided.
+
+## 5. Questions Requiring User Judgment
 
 Do not silently decide these when evidence is missing:
 
@@ -38,8 +59,16 @@ Do not silently decide these when evidence is missing:
 - First revenue point: subscription, one-time purchase, paid pilot, service package, template package, or another scenario?
 - Data strategy: local-first, cloud-sync, hosted, export-only, or undecided?
 - Human involvement: fully self-serve, assisted, concierge, or hybrid?
+- Page ownership: which page owns primary input, review, history, settings, and paid actions?
+- Commercial pages: which pages own login / signup, onboarding, pricing, billing, payment result, account management, and promotion?
 
-## 5. Revenue Standard
+Agent rule:
+
+- The agent may propose candidates and a recommendation, but must ask the user before freezing decisions that affect launch surface, account system, billing, pricing, data strategy, AI cost, acquisition promise, or required page scope.
+- If evidence is missing, write `证据不足`.
+- If a change expands the first launch scope, state what scope expanded before editing.
+
+## 6. Revenue Standard
 
 ### 证据
 
@@ -56,7 +85,6 @@ Do not silently decide these when evidence is missing:
 - What user pays for:
 - Minimum proof required:
 
-## 6. Not First Launch
+## 7. Not First Launch
 
 - [待填写]
-
