@@ -29,21 +29,22 @@ First launch product
 |----------------------|----------------|-------------|-----------------|-------------------|-----------------------|
 | [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | required / candidate / excluded |
 
-## 4. Page Capability Design
+## 4. Concrete Page Design
 
-Define every first launch page and the capabilities each page contains. Do not design page transitions here.
+Define every first launch page, page level, and concrete visible content. Do not design page transitions here.
 
-| Page | Page responsibility | Visible content | Capabilities shown | User actions | System feedback | First launch decision |
-|------|---------------------|-----------------|--------------------|--------------|-----------------|-----------------------|
-| [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | [待填写] | required / candidate / excluded |
+| Level | Page | Concrete visible content | First launch decision |
+|-------|------|--------------------------|-----------------------|
+| primary / secondary / tertiary | [待填写] | [待填写] | required / candidate / excluded |
 
 Page design rules:
 
-- A capability is not launch-ready until it has a page owner.
-- Each required page must state what the user sees, what the user can do, and what state the system returns.
+- A capability is not launch-ready until it appears on a concrete page.
+- Each required page must state the controls, content blocks, states, empty states, and policy links the user sees.
 - A first launch product that needs revenue must include account, pricing / billing, payment result, and acquisition / promotion pages.
 - A self-serve first launch product should include onboarding or first-run guidance unless there is explicit evidence that users do not need it.
 - Page transitions, navigation hierarchy, pixel-level UI, and engineering tasks belong in downstream product repositories.
+- Do not use abstract columns such as `Capabilities shown`, `User actions`, or `System feedback` as a substitute for concrete page content.
 
 Input ownership:
 
