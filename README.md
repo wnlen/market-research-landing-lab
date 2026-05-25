@@ -32,7 +32,7 @@ Open Claude Code and type:  start this project
 
 Claude runs a four-round interview (skills → channels → moat → constraints) and writes your answers into `docs/00-research-question.md`.
 
-**Have existing docs?** Drop them into `research/raw/` first. Claude reads them before each round and opens with its understanding of that area — you react, correct, or expand rather than narrating from scratch. The docs are reference material, not answers; everything still goes through you.
+**Have existing docs?** Drop them into `research/raw/inbox/` first. Claude reads them before each round and opens with its understanding of that area — you react, correct, or expand rather than narrating from scratch. The docs are reference material, not answers; everything still goes through you.
 
 Either way, Claude shows you the full proposed content for your approval **before** writing anything.
 
@@ -51,8 +51,8 @@ docs/00   Research Question   ──  Define the decision before you research
 docs/01   Market Map          ──  Landscape, segments, key players
 docs/02   User Segments       ──  Who has the problem, who will pay
 docs/03   Competitor Map      ──  First-screen hooks, pricing, weak spots
-docs/04   Short-Term Options  ──  Paths to revenue within 30 days
-docs/05   Long-Term Moat      ──  Defensible assets built in 12 months
+docs/04   Short-Term Options  ──  Paths to credible revenue
+docs/05   Long-Term Moat      ──  Defensible assets worth accumulating
 docs/06   Fusion Strategy     ──  Where both paths share assets
 docs/07   MVP Candidates      ──  Side-by-side comparable options
 docs/08   Final Decision      ──  Locked direction, frozen reasoning
@@ -81,8 +81,8 @@ Research stops when all six questions have specific, executable answers:
 
 - [ ] What to build first — a concrete product or service, not a direction
 - [ ] What NOT to build — explicit exclusions with verifiable reasons
-- [ ] 7-day demo scope — completable by one person in one week
-- [ ] 30-day MVP scope — smallest version someone will pay for
+- [ ] Minimum demo shape — independently buildable by one person
+- [ ] First launchable version — smallest version that can go live, serve real users, and meet the revenue standard
 - [ ] First revenue point — specific amount and payment scenario
 - [ ] How the short-term project feeds the long-term moat — specific asset flow, not a slogan
 
@@ -98,11 +98,12 @@ Research stops when all six questions have specific, executable answers:
 ├── decisions/                   # Architecture Decision Records (ADRs)
 ├── docs/
 │   ├── 00–09 *.md               # Fixed research pipeline
+│   ├── product/                 # Product shape and first launch product design
+│   ├── audits/                  # Repo and decision-chain audits
 │   └── templates/               # Reusable tables and card formats
 ├── prompts/                     # Per-agent prompt library
 ├── research/
-│   ├── raw/                     # Everything unprocessed: your own brainstorms, vision docs,
-│   │                            # rough plans, external articles, interview notes, AI chat exports
+│   ├── raw/                     # Raw material lifecycle: inbox / absorbed / migration / deprecated
 │   ├── source-cards/            # Single-fact evidence cards
 │   ├── competitor-cards/        # Standardized competitor profiles
 │   └── user-cards/              # User pain points and interview notes
@@ -117,7 +118,8 @@ Research stops when all six questions have specific, executable answers:
 2. Clone your new repo
 3. Open Claude Code → type **"start this project"**
 4. Complete the four-round interview (~5 min)
-5. Start filling `docs/01` onward
+5. Read `docs/README.md`, then verify `docs/00-research-question.md`
+6. Start filling `docs/01` onward
 
 **This base repo stays clean.** Never do domain-specific research here.
 Derive a new repo per project. One project, one repo.
@@ -131,6 +133,15 @@ Derive a new repo per project. One project, one repo.
 - Not a place to write market claims without sources
 - Not a tool for open-ended research without a decision target
 - Not a system that auto-generates conclusions from assumptions
+
+---
+
+## Docs Map
+
+- `docs/README.md` is the entry point after initialization.
+- `docs/00-09` is the fixed research-to-decision pipeline.
+- `docs/product/` holds product shape and first launch design.
+- `docs/audits/` holds repository and decision-chain audits.
 
 ---
 

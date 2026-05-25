@@ -8,7 +8,7 @@
 
 - 每次只补一个赛道
 - 不在本文件里写原始资料全文
-- 原始资料放到 `research/raw/` 或卡片目录
+- 新原始资料放到 `research/raw/inbox/`，已吸收材料按 `research/raw/INDEX.md` 归档
 
 ## 模板
 

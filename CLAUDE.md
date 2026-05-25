@@ -22,6 +22,11 @@ The goal is to help decide:
   - a rejection
   - a next verification step
 - Keep raw notes and final judgments separate.
+- Put new raw material in `research/raw/inbox/`.
+- Move absorbed material to `research/raw/absorbed/`.
+- Move downstream implementation input to `research/raw/migration/`.
+- Move rejected or inactive raw material to `research/raw/deprecated/`.
+- Classify new docs before writing them: `docs/00-09` for the main research pipeline, `docs/product/` for product shape and first launch product design, `docs/audits/` for audits, and `docs/templates/` for reusable templates.
 - Keep one file focused on one topic.
 - Never present unverified market claims as facts.
 - Always separate `证据 / 推断 / 决策`.
@@ -54,7 +59,7 @@ Research should stop when the team can clearly answer:
 
 1. what to build first
 2. what not to build
-3. what the 7-day demo is
-4. what the 30-day MVP is
+3. what the minimum demo shape is
+4. what the first launchable version is
 5. what the first monetization point is
 6. how the short-term project feeds the long-term moat
